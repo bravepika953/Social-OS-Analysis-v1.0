@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>社会OSフレームワーク Unified Model v1.0</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #0f172a;
+            color: #f1f5f9;
+            margin: 0;
+            padding: 0;
+        }
+        .layer-box {
+            background: rgba(30, 41, 59, 0.5);
+            border: 1px solid rgba(148, 163, 184, 0.2);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        .flow-arrow {
+            display: flex;
+            justify-content: center;
+            margin: -20px 0 20px 0;
+            color: #3b82f6;
+            opacity: 0.6;
+        }
+        .os-card {
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid rgba(236, 72, 153, 0.3);
+            border-radius: 8px;
+            padding: 12px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .os-card:hover {
+            transform: translateY(-5px);
+            border-color: #ec4899;
+        }
+        .highlight-os {
+            border: 2px solid #ec4899;
+            box-shadow: 0 0 15px rgba(236, 72, 153, 0.4);
+        }
+        .filter-shape {
+            background: linear-gradient(180deg, rgba(59, 130, 246, 0.2) 0%, rgba(59, 130, 246, 0.05) 100%);
+            clip-path: polygon(5% 0%, 95% 0%, 100% 100%, 0% 100%);
+            padding: 20px;
+        }
+        .tag {
+            background: rgba(148, 163, 184, 0.1);
+            padding: 4px 12px;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            border: 1px solid rgba(148, 163, 184, 0.2);
+        }
+        .news-card {
+            background: #f1f5f9;
+            color: #0f172a;
+            padding: 10px;
+            border-radius: 4px;
+            font-weight: bold;
+            box-shadow: 4px 4px 0px #3b82f6;
+            transform: rotate(-1deg);
+        }
+    </style>
+</head>
+<body class="p-4 md:p-10 max-w-4xl mx-auto">
+
+    <!-- Header -->
+    <header class="text-center mb-16 pt-10">
+        <p class="text-slate-400 text-sm mb-2">Social OS Analysis - Unified Model v1.0</p>
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 tracking-tight">社会OSフレームワーク</h1>
+        <p class="text-xl md:text-2xl text-blue-400 font-medium">社会は「正しさ」ではなく「OS」で動く</p>
+        <div class="mt-4 flex justify-center gap-4 text-xs text-slate-500">
+            <span>By 松濤紀之</span>
+            <span>@Brave_Pika953</span>
+        </div>
+    </header>
+
+    <!-- Layer 0: Environment -->
+    <section class="layer-box border-blue-500/30">
+        <div class="flex justify-between items-center mb-6">
+            <h2 class="text-blue-400 font-bold text-xl uppercase tracking-widest">Layer 0 : 環境</h2>
+            <span class="text-xs text-slate-400 italic">OS更新のトリガー</span>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div>
+                <p class="text-xs text-slate-500 mb-1">メディア構造</p>
+                <p class="font-bold">TV <span class="text-blue-500">→</span> SNS <span class="text-blue-500">→</span> AI</p>
+            </div>
+            <div>
+                <p class="text-xs text-slate-500 mb-1">経済構造</p>
+                <p class="font-bold">成長 <span class="text-blue-500">→</span> 停滞 <span class="text-blue-500">→</span> 不安</p>
+            </div>
+            <div>
+                <p class="text-xs text-slate-500 mb-1">社会心理</p>
+                <p class="font-bold">希望 <span class="text-blue-500">→</span> 怒り <span class="text-blue-500">→</span> 疲労</p>
+            </div>
+            <div>
+                <p class="text-xs text-slate-500 mb-1">情報速度</p>
+                <p class="font-bold">週 <span class="text-blue-500">→</span> 日 <span class="text-blue-500">→</span> 秒</p>
+            </div>
+        </div>
+        <p class="text-right text-sm text-slate-400 mt-6 italic">※OSは進化ではなく環境適応である</p>
+    </section>
+
+    <div class="flow-arrow">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+    </div>
+
+    <!-- Layer 1: Input -->
+    <section class="layer-box">
+        <h2 class="text-blue-400 font-bold text-xl mb-6 uppercase tracking-widest">Layer 1 : 入力 (Raw Input)</h2>
+        <div class="flex flex-wrap gap-3 justify-center">
+            <span class="tag border-red-500/50 text-red-400">🔥 怒り</span>
+            <span class="tag border-yellow-500/50 text-yellow-400">⚠️ 不安</span>
+            <span class="tag border-green-500/50 text-green-400">✨ 希望</span>
+            <span class="tag border-blue-500/50 text-blue-400">⚖️ 正義</span>
+            <span class="tag border-purple-500/50 text-purple-400">🛡️ 被害感覚</span>
+            <span class="tag border-slate-500/50 text-slate-400">📖 理念</span>
+        </div>
+        <p class="text-center text-sm text-slate-500 mt-6">まだ構造ではない。ただの燃料。</p>
+    </section>
+
+    <div class="flow-arrow">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+    </div>
+
+    <!-- Layer 2: Narrative Engine -->
+    <section class="layer-box">
+        <h2 class="text-blue-400 font-bold text-xl mb-6 uppercase tracking-widest">Layer 2 : 翻訳エンジン</h2>
+        <div class="max-w-xs mx-auto text-center border-y border-slate-700 py-6">
+            <p class="text-lg font-bold mb-4">現実は物語に圧縮される</p>
+            <div class="grid grid-cols-2 gap-4 text-sm">
+                <div class="bg-slate-800 p-2 rounded">善 vs 悪</div>
+                <div class="bg-slate-800 p-2 rounded">被害者 vs 加害者</div>
+                <div class="bg-slate-800 p-2 rounded">私たち vs 彼ら</div>
+                <div class="bg-slate-800 p-2 rounded">正義の側</div>
+            </div>
+        </div>
+    </section>
+
+    <div class="flow-arrow">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+    </div>
+
+    <!-- Layer 3: Mobilization OS -->
+    <section class="layer-box bg-slate-900/80 border-pink-500/20 shadow-2xl shadow-pink-500/5">
+        <h2 class="text-pink-500 font-bold text-2xl mb-8 text-center uppercase tracking-widest">Layer 3 : 動員OS (Mobilization OS)</h2>
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-3">
+            <div class="os-card">
+                <p class="text-[10px] text-slate-500">戦後〜80s</p>
+                <p class="font-bold text-sm text-white">第1世代</p>
+                <p class="text-pink-400 font-bold my-2">理念OS</p>
+                <p class="text-[10px] text-slate-400">理想・正義</p>
+            </div>
+            <div class="os-card">
+                <p class="text-[10px] text-slate-500">90s〜00s</p>
+                <p class="font-bold text-sm text-white">第2世代</p>
+                <p class="text-pink-400 font-bold my-2">共感OS</p>
+                <p class="text-[10px] text-slate-400">象徴・物語</p>
+            </div>
+            <div class="os-card">
+                <p class="text-[10px] text-slate-500">2010s</p>
+                <p class="font-bold text-sm text-white">第3世代</p>
+                <p class="text-pink-400 font-bold my-2">敵味方OS</p>
+                <p class="text-[10px] text-slate-400">怒り・対立</p>
+            </div>
+            <div class="os-card highlight-os">
+                <p class="text-[10px] text-pink-300">2020s〜</p>
+                <p class="font-bold text-sm text-white">第4世代</p>
+                <p class="text-pink-400 font-bold my-2">生活機能OS</p>
+                <p class="text-[10px] text-slate-400">実利・安全</p>
+            </div>
+            <div class="os-card opacity-50 border-dashed">
+                <p class="text-[10px] text-slate-500">未来</p>
+                <p class="font-bold text-sm text-white">第5世代</p>
+                <p class="text-pink-400 font-bold my-2">AI共鳴OS</p>
+                <p class="text-[10px] text-slate-400">超個別動員</p>
+            </div>
+        </div>
+        <p class="text-center text-sm font-bold mt-8 text-white">選挙・NGO・SNS運動はすべてここで動く</p>
+    </section>
+
+    <div class="flow-arrow">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+    </div>
+
+    <!-- Layer 4: Institution Filter -->
+    <section class="layer-box">
+        <h2 class="text-blue-400 font-bold text-xl mb-6 uppercase tracking-widest">Layer 4 : 制度フィルター</h2>
+        <div class="filter-shape text-center">
+            <div class="flex flex-wrap justify-center gap-4">
+                <span class="text-sm font-bold">資金構造</span>
+                <span class="text-sm font-bold">支持層構造</span>
+                <span class="text-sm font-bold">メディア構造</span>
+                <span class="text-sm font-bold">法制度</span>
+                <span class="text-sm font-bold">組織生存</span>
+            </div>
+        </div>
+        <p class="text-center text-sm text-slate-400 mt-6">ここで現実は歪む。善悪ではなくインセンティブの結果。</p>
+    </section>
+
+    <div class="flow-arrow">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+    </div>
+
+    <!-- Layer 5: Equilibrium -->
+    <section class="layer-box text-center">
+        <h2 class="text-blue-400 font-bold text-xl mb-6 uppercase tracking-widest">Layer 5 : 均衡 (System Equilibrium)</h2>
+        <div class="inline-block border-2 border-slate-700 p-6 rounded-full">
+            <p class="text-xl font-bold text-white mb-2">誰も最適解を選ばない</p>
+            <p class="text-xs text-slate-500">支持者離脱の恐怖 / 炎上回避 / ナッシュ均衡 / 生存本能</p>
+        </div>
+    </section>
+
+    <div class="flow-arrow">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+    </div>
+
+    <!-- Layer 6: Output -->
+    <section class="layer-box border-none bg-transparent">
+        <h2 class="text-blue-400 font-bold text-xl mb-10 text-center uppercase tracking-widest">Layer 6 : 出力 (Visible Reality)</h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+            <div class="news-card">SNS炎上</div>
+            <div class="news-card">世論の分断</div>
+            <div class="news-card">政治ショー</div>
+            <div class="news-card">NGOの選択的沈黙</div>
+            <div class="news-card">メディアの一致</div>
+            <div class="news-card">不毛な論争</div>
+        </div>
+        <div class="mt-16 text-center">
+            <p class="text-3xl md:text-4xl font-black text-red-500 tracking-tighter">これは原因ではない。結果である。</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-20 mb-20 text-center border-t border-slate-800 pt-10">
+        <p class="text-slate-400 mb-6">社会を「構造」として観察中</p>
+        <div class="flex flex-wrap justify-center gap-4 mb-8">
+            <span class="text-sm font-bold text-slate-500">#社会OS</span>
+            <span class="text-sm font-bold text-slate-500">#動員OS</span>
+            <span class="text-sm font-bold text-slate-500">#構造分析</span>
+            <span class="text-sm font-bold text-slate-500">#認知戦</span>
+        </div>
+        <div class="text-xs text-slate-600">
+            © 松濤紀之 | Brave_Pika953
+        </div>
+    </footer>
+
+</body>
+</html>
